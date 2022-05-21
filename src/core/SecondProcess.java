@@ -16,7 +16,7 @@ public class SecondProcess extends Thread implements Runnable {
 		
 	}
 
-	/** некоторое логическое воздействие на объект Alpha*/
+	 /** РЅРµРєРѕС‚РѕСЂРѕРµ Р»РѕРіРёС‡РµСЃРєРѕРµ РІРѕР·РґРµР№СЃС‚РІРёРµ РЅР° РѕР±СЉРµРєС‚ Alpha*/
 	private void initLogocStreamExecution() {
 		ModuleAlpha ma = new ModuleAlpha();
 		ma.changeObjectState();

@@ -15,7 +15,7 @@ public class FarmProcess extends Thread implements Runnable {
 		
 	}
 
-	/** некоторое логическое воздействие на объект Farm*/
+	 /** РЅРµРєРѕС‚РѕСЂРѕРµ Р»РѕРіРёС‡РµСЃРєРѕРµ РІРѕР·РґРµР№СЃС‚РІРёРµ РЅР° РѕР±СЉРµРєС‚ Farm*/
 	private void initLogocStreamExecution() {
 		Farm farm = new Farm();
 		farm.growthAgriculture();
