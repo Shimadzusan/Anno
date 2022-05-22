@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class ModuleAlpha {
 	int x = 10;
-	int y = 200;
+	int y = 220;
 	int z = 370;
 	
-	/** просто возвразает сумму значений которая не может быть больше 60*/
+	/** РєРѕРЅС‚СЂРѕР»СЊРЅР°СЏ СЃСѓРјРјРјР° 580*/
 	public int getObjectValue() {
 		return x + y + z;
 	}
