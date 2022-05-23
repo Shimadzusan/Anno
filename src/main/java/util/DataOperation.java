@@ -1,8 +1,10 @@
 package util;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class DataOperation {
@@ -20,7 +22,19 @@ public class DataOperation {
 		return result;
 	}
 	
-	public boolean writeDataToFile(String fileName, String text) {
+	public boolean writeDataToFile(String fileName, String text) throws IOException {
+//		try (FileWriter fw = new FileWriter(fileName);
+//			       BufferedWriter bw = new BufferedWriter(fw)) {
+//			      bw.write(text);
+//			      bw.newLine(); // add new line, System.lineSeparator()
+//			  }
+
+				 // append mode
+			  try (FileWriter fw = new FileWriter(fileName, false);
+			       BufferedWriter bw = new BufferedWriter(fw)) {
+			      bw.write(text);
+			      bw.newLine();
+			  }
 		return true;
 	}
 

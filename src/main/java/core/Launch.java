@@ -18,25 +18,28 @@ public class Launch {
 		System.out.println("..something execution");
 		System.out.println("..end point of the stream execution");
 		
-		Thread mp = new MainProcess();
-		mp.start();
-		
-		Thread sp = new SecondProcess();
-		sp.start();
-		
-		Thread fp = new FarmProcess();
-		fp.start();
-		
-		Thread bk = new BankingProcess();
-		bk.start();
+//		Thread mp = new MainProcess();
+//		mp.start();
+//		
+//		Thread sp = new SecondProcess();
+//		sp.start();
+//		
+//		Thread fp = new FarmProcess();
+//		fp.start();
+//		
+//		Thread bk = new BankingProcess();
+//		bk.start();
 		
 //===========================================
-//		Bank bn = new Bank();
-//		bn.someMethod();
-//		bn.executeTransaction("125", "123", 5);
-		
+		Bank bn = new Bank();
+		bn.uploadData();
+		bn.executeTransaction("1125", "1123", 5);
+		System.out.println("+-+");
+		bn.downloadData();
 //		String s = new DataOperation().readDataFromFile("C:\\Users\\tokug\\eclipse-workspace\\Anno\\balance.txt");
 //		System.out.println(s);
+		
+		//new DataOperation().writeDataToFile("C:\\Users\\tokug\\eclipse-workspace\\Anno\\balance.txt", "125+125+125");
 		System.out.println("...end");
 
 	}

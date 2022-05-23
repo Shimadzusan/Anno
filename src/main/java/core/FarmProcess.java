@@ -1,5 +1,6 @@
 package core;
 
+/** здесь описывается только последовательность и логика воздействий, основного процесса*/
 public class FarmProcess extends Thread implements Runnable {
 
 	@Override
@@ -7,7 +8,7 @@ public class FarmProcess extends Thread implements Runnable {
 		try {
 			for (int j = 0; j < 100; j++) {
 				Thread.sleep(2500);
-				initLogocStreamExecution();	//..some stream execution
+				initLogicStreamExecution();	//..some stream execution
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -16,9 +17,10 @@ public class FarmProcess extends Thread implements Runnable {
 	}
 
 	 /** некоторое логическое воздействие на объект Farm*/
-	private void initLogocStreamExecution() {
+	private void initLogicStreamExecution() {
 		Farm farm = new Farm();
 		farm.growthAgriculture();
+		farm.calculateBalance();
 		
 	}
 }
