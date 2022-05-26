@@ -40,4 +40,8 @@ public class Bank {
 			new DataOperation().writeDataToFile("C:\\Users\\tokug\\eclipse-workspace\\Anno\\balance.txt", data);
 		}
 	}
+	
+	void openAccount() {}
+	void closeAccount() {}
+	void balanceAccount() {}
 }

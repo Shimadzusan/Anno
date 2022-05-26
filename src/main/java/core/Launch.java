@@ -2,6 +2,8 @@ package core;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.Random;
 
 import util.DataOperation;
@@ -41,10 +43,9 @@ public class Launch {
 //		bn.executeTransaction(x + "", y + "", z);
 //		System.out.println("+-+");
 //		bn.downloadData();
-//		String s = new DataOperation().readDataFromFile("C:\\Users\\tokug\\eclipse-workspace\\Anno\\balance.txt");
-//		System.out.println(s);
 		
 		//new DataOperation().writeDataToFile("C:\\Users\\tokug\\eclipse-workspace\\Anno\\balance.txt", "125+125+125");
+		
 		System.out.println("...end");
 
 	}
