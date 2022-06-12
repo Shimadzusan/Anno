@@ -1,6 +1,9 @@
 package core;
 
+import java.io.IOException;
 import java.util.Random;
+
+import util.DataOperation;
 
 public class Farm {
 	
@@ -18,16 +21,25 @@ public class Farm {
 	PowerDepartment pd = new PowerDepartment();
 
 	/** метод генерирует значение продукта для одной фермы */
-	public void growthAgriculture() {
+	public void growthAgriculture() throws Exception {
 		equipment++;
 		Random r = new Random();
 		int x = 0;	
 		for (int i = 0; i < 2; i++) {
 			x = r.nextInt(1000000);
+			produceWork(x + "");
 			//System.out.println(x);
 			if(x > 10 && compareValue(x))product++;
 		}
 		System.out.println("..growth ..growth, product: " + product + " equipment: " + equipment);
+	}
+	
+	/** метод имитирует производство некоторой работы, напр. записывает в файл */
+	public void produceWork(String data) throws Exception {
+		String s = new DataOperation().readDataFromFile("C:\\Users\\tokug\\eclipse-workspace\\Anno3\\Anno\\farmData.txt");
+		s = s + data;
+		new DataOperation().writeDataToFile("C:\\Users\\tokug\\eclipse-workspace\\Anno3\\Anno\\farmData.txt", s);
+		//System.out.println("..produceWork: " + data);
 	}
 	
 	void calculateBalance() {
@@ -46,4 +58,3 @@ public class Farm {
 	}
 	
 }
-

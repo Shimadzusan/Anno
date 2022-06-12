@@ -70,6 +70,8 @@ public class Launch {
 //		System.out.println(b-a);
 //
 //		System.out.println("...end");
+		
+		//new DataOperation().writeDataToFile("C:\\Users\\tokug\\eclipse-workspace\\Anno3\\Anno\\farmData.txt", "123");
 
 	}
 

@@ -24,7 +24,7 @@ public class FarmProcess extends Thread implements Runnable {
 				Thread.sleep(2500);
 				actionLogicStreamExecution();	//..some stream execution
 			}
-		} catch (InterruptedException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
@@ -44,8 +44,8 @@ public class FarmProcess extends Thread implements Runnable {
 		}
 	}
 	
-	 /** некоторое логическое воздействие на объект Farm*/
-	private void actionLogicStreamExecution() {
+	 /** некоторое логическое воздействие на объект Farm */
+	private void actionLogicStreamExecution() throws Exception {
 		//farm.growthAgriculture();
 		farm.calculateBalance();
 		worker.doWork(farm);
