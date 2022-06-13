@@ -1,4 +1,4 @@
-package core;
+package banking;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

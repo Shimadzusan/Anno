@@ -8,6 +8,7 @@ import java.sql.Time;
 import java.util.Date;
 import java.util.Random;
 
+import banking.BankingProcess;
 import util.DataOperation;
 
 /**
@@ -31,7 +32,7 @@ public class Launch {
 		sp.start();
 		
 		Thread fp = new FarmProcess();
-		fp.start();
+		//fp.start();
 		
 		Thread bk = new BankingProcess();
 		bk.start();

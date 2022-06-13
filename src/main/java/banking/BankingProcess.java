@@ -1,14 +1,20 @@
-package core;
+package banking;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Random;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class BankingProcess extends Thread implements Runnable {
 
+	private static final Logger LOG = LogManager.getLogger(BankingProcess.class);
+	
 	@Override
 	public void run() {
-			
+		
+		LOG.info("begin BankingProcess");
 		try {
 			for (int j = 0; j < 200; j++) {
 				Thread.sleep(1500);
@@ -22,7 +28,8 @@ public class BankingProcess extends Thread implements Runnable {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}	
+		}
+		LOG.info("end BankingProcess");
 	}
 
 	/** некоторое логическое воздействие на объект Bank */
