@@ -6,8 +6,11 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.sql.Time;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.Random;
 
+import banking.Bank;
+import banking.BankingProcess;
 import util.DataOperation;
 
 /**
@@ -31,12 +34,20 @@ public class Launch {
 		sp.start();
 		
 		Thread fp = new FarmProcess();
-		fp.start();
+		//fp.start();
 		
 		Thread bk = new BankingProcess();
 		bk.start();
 		
 //===========================================
+//		for (int i = 1001; i < 1200; i++) {
+//			Random randomNumber = new Random();
+////			int x = randomNumber.nextInt(1001, 1200);
+////			int y = randomNumber.nextInt(1001, 1200);
+//			int z = randomNumber.nextInt(100);
+//			System.out.println("{\"accontNumber\": \"" + i + "\",\"amount\": " + z + ",\"firstName\": \"\",\"secondName\": \"\",\"otchestvo\": \"\",\"typeDocument\": \"\",\"idDocument\": \"\"},");	
+//		}
+//		System.out.println();
 //		Bank bn = new Bank();
 //		bn.uploadData();
 //		Random randomNumber = new Random();
@@ -44,7 +55,6 @@ public class Launch {
 //		int y = randomNumber.nextInt(1001, 1200);
 //		int z = randomNumber.nextInt(100);
 //		bn.executeTransaction(x + "", y + "", z);
-//		System.out.println("+-+");
 //		bn.downloadData();
 		//new DataOperation().writeDataToFile("C:\\Users\\tokug\\eclipse-workspace\\Anno\\balance.txt", "125+125+125");
 		
@@ -71,8 +81,6 @@ public class Launch {
 //
 //		System.out.println("...end");
 		
-		//new DataOperation().writeDataToFile("C:\\Users\\tokug\\eclipse-workspace\\Anno3\\Anno\\farmData.txt", "123");
-
 	}
 
 	/** description... */

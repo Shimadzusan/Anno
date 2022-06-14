@@ -6,8 +6,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 import core.AccountingDepartment;
-import core.Bank;
-import core.BankingProcess;
+import banking.Bank;
+import banking.BankingProcess;
 import core.Farm;
 import core.FarmProcess;
 import core.Launch;
