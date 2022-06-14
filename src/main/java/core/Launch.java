@@ -12,6 +12,7 @@ import java.util.Random;
 import banking.Bank;
 import banking.BankingProcess;
 import util.DataOperation;
+import workforce.FarmProcess;
 
 /**
  * Основной поток исполнения, и остальные дополнительные итд

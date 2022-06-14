@@ -1,4 +1,4 @@
-package core;
+package workforce;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,6 +11,7 @@ import java.util.Properties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import core.ConfigurationModule;
 import workforce.Worker;
 
 /** здесь описывается только последовательность и логика воздействий, основного процесса*/

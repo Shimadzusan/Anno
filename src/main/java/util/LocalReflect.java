@@ -5,19 +5,19 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import core.AccountingDepartment;
+import workforce.AccountingDepartment;
 import banking.Bank;
 import banking.BankingProcess;
-import core.Farm;
-import core.FarmProcess;
+import workforce.Farm;
+import workforce.FarmProcess;
 import core.Launch;
 import core.MainProcess;
 import core.ModuleAlpha;
 import core.ModuleBetta;
-import core.PowerDepartment;
+import workforce.PowerDepartment;
 import core.SecondProcess;
-import core.Warehouse;
-import core.WarehouseProcess;
+import logistic.Warehouse;
+import logistic.WarehouseProcess;
 
 public class LocalReflect {
 	LocalReflect() throws FileNotFoundException, IOException {

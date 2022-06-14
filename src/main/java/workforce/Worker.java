@@ -1,6 +1,5 @@
 package workforce;
 
-import core.Farm;
 
 public class Worker {
 	int id;

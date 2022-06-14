@@ -1,4 +1,4 @@
-package core;
+package logistic;
 
 public class Warehouse {
 	int ware = 0;

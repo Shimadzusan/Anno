@@ -1,4 +1,4 @@
-package core;
+package workforce;
 
 import java.io.IOException;
 import java.util.Random;
