@@ -50,8 +50,6 @@ public class FarmProcess extends Thread implements Runnable {
 
 	 /** некоторое логическое воздействие на объект Farm*/
 	private void initLogicStreamExecution() {
-		farm = new Farm();
-		farm2 = new Farm();
 		
 		worker = new Worker();
 		worker2 = new Worker();
@@ -60,21 +58,25 @@ public class FarmProcess extends Thread implements Runnable {
 		for (int i = 0; i < 200; i++) {
 			workerList.add(new Worker());
 		}
+		
+		farm = new Farm(workerList);
+		farm2 = new Farm();
 	}
 	
 	 /** некоторое логическое воздействие на объект Farm */
 	private void actionLogicStreamExecution() throws Exception {
-		//farm.growthAgriculture();
 		farm.calculateBalance();
-		worker.doWork(farm);
-		worker2.doWork(farm2);
-		worker3.doWork(farm2);
+		farm.produceWork();
 		
-		for (Worker worker : workerList) {
-			worker.doWork(farm);
-		}
+//		worker.doWork(farm);
+//		worker2.doWork(farm2);
+//		worker3.doWork(farm2);
+//		
+//		for (Worker worker : workerList) {
+//			worker.doWork(farm);
+//		}
 		//farm2.growthAgriculture();
-		farm2.calculateBalance();
+		//farm2.calculateBalance();
 	}
 	
 	 /** некоторое логическое воздействие на объект Farm*/

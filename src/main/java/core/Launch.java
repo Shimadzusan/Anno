@@ -35,7 +35,7 @@ public class Launch {
 		sp.start();
 		
 		Thread fp = new FarmProcess();
-		//fp.start();
+		fp.start();
 		
 		Thread bk = new BankingProcess();
 		bk.start();

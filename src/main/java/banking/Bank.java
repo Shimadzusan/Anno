@@ -61,7 +61,7 @@ public class Bank {
 		//System.out.println("poolAccounts");
 		
 		Gson gson = new Gson();
-		String s = new DataOperation().readDataFromFile("C:\\Users\\tokug\\eclipse-workspace\\Anno3\\Anno\\poolAccounts.json");
+		String s = new DataOperation().readDataFromFile("C:\\Users\\worker\\eclipse-workspace\\Anno\\poolAccounts.json");
 		bankArray = gson.fromJson(s, BankArray.class);
 
 		for (int i = 0; i < bankArray.getBankArray().size(); i++) {
@@ -90,7 +90,7 @@ public class Bank {
 		
 		bankArray.setBankArray(listClientAccount);
 		String jsonInString = gson.toJson(bankArray);
-		new DataOperation().writeDataToFile("C:\\Users\\tokug\\eclipse-workspace\\Anno3\\Anno\\poolAccounts.json", jsonInString);
+		new DataOperation().writeDataToFile("C:\\Users\\worker\\eclipse-workspace\\Anno\\poolAccounts.json", jsonInString);
 		LOG.info("poolAccounts download successful, size: " + poolAccounts.size());
 	}
 	
