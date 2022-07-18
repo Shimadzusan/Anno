@@ -20,6 +20,7 @@ public class Bank {
 	private static final Logger LOG = LogManager.getLogger(Bank.class);
 	String account;
 	int amount;
+	private int totalAmount;
 	
 	BankArray bankArray;
 	//Map or List
@@ -61,7 +62,7 @@ public class Bank {
 		//System.out.println("poolAccounts");
 		
 		Gson gson = new Gson();
-		String s = new DataOperation().readDataFromFile("C:\\Users\\tokug\\eclipse-workspace\\Anno3\\Anno\\poolAccounts.json");
+		String s = new DataOperation().readDataFromFile("C:\\Users\\worker\\eclipse-workspace\\Anno\\poolAccounts.json");
 		bankArray = gson.fromJson(s, BankArray.class);
 
 		for (int i = 0; i < bankArray.getBankArray().size(); i++) {
@@ -86,12 +87,14 @@ public class Bank {
 		
 		for(HashMap.Entry<String, ClientAccount> item : poolAccounts.entrySet()) {
 			listClientAccount.add(item.getValue());
+			//System.out.println("*** " + item.getValue().getAmount());
+			totalAmount = totalAmount + item.getValue().getAmount();
 		}
 		
 		bankArray.setBankArray(listClientAccount);
 		String jsonInString = gson.toJson(bankArray);
-		new DataOperation().writeDataToFile("C:\\Users\\tokug\\eclipse-workspace\\Anno3\\Anno\\poolAccounts.json", jsonInString);
-		LOG.info("poolAccounts download successful, size: " + poolAccounts.size());
+		new DataOperation().writeDataToFile("C:\\Users\\worker\\eclipse-workspace\\Anno\\poolAccounts.json", jsonInString);
+		LOG.info("poolAccounts download successful, size: " + poolAccounts.size() + " totalAmount: " + totalAmount);
 	}
 	
 	void openAccount() {}

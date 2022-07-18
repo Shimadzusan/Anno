@@ -440,3 +440,23 @@ INFO  | 2022-06-13 14:48:14 | [Thread-3] banking.BankingProcess (BankingProcess.
 INFO  | 2022-06-13 14:48:14 | [Thread-3] banking.Bank (Bank.java:72) - poolAccounts upload successful, size: 200
 INFO  | 2022-06-13 14:53:16 | [Thread-3] banking.Bank (Bank.java:94) - poolAccounts download successful, size: 200
 INFO  | 2022-06-13 14:53:16 | [Thread-3] banking.BankingProcess (BankingProcess.java:35) - end BankingProcess
+INFO  | 2022-07-18 08:53:53 | [Thread-3] banking.BankingProcess (BankingProcess.java:17) - begin BankingProcess
+INFO  | 2022-07-18 08:53:53 | [Thread-3] banking.BankingProcess (BankingProcess.java:35) - end BankingProcess
+INFO  | 2022-07-18 08:55:56 | [Thread-3] banking.BankingProcess (BankingProcess.java:17) - begin BankingProcess
+INFO  | 2022-07-18 08:55:56 | [Thread-3] banking.Bank (Bank.java:72) - poolAccounts upload successful, size: 200
+INFO  | 2022-07-18 09:00:51 | [Thread-3] banking.BankingProcess (BankingProcess.java:17) - begin BankingProcess
+INFO  | 2022-07-18 09:00:51 | [Thread-3] banking.Bank (Bank.java:72) - poolAccounts upload successful, size: 200
+INFO  | 2022-07-18 09:05:53 | [Thread-3] banking.Bank (Bank.java:95) - poolAccounts download successful, size: 200
+INFO  | 2022-07-18 09:05:53 | [Thread-3] banking.BankingProcess (BankingProcess.java:35) - end BankingProcess
+INFO  | 2022-07-18 09:08:13 | [Thread-3] banking.BankingProcess (BankingProcess.java:17) - begin BankingProcess
+INFO  | 2022-07-18 09:08:13 | [Thread-3] banking.Bank (Bank.java:72) - poolAccounts upload successful, size: 200
+INFO  | 2022-07-18 09:13:14 | [Thread-3] banking.Bank (Bank.java:95) - poolAccounts download successful, size: 200
+INFO  | 2022-07-18 09:13:14 | [Thread-3] banking.BankingProcess (BankingProcess.java:35) - end BankingProcess
+INFO  | 2022-07-18 09:16:21 | [Thread-3] banking.BankingProcess (BankingProcess.java:17) - begin BankingProcess
+INFO  | 2022-07-18 09:16:21 | [Thread-3] banking.Bank (Bank.java:73) - poolAccounts upload successful, size: 200
+INFO  | 2022-07-18 09:21:22 | [Thread-3] banking.Bank (Bank.java:97) - poolAccounts download successful, size: 200 totalAmount: 10326
+INFO  | 2022-07-18 09:21:22 | [Thread-3] banking.BankingProcess (BankingProcess.java:35) - end BankingProcess
+INFO  | 2022-07-18 09:22:21 | [Thread-3] banking.BankingProcess (BankingProcess.java:17) - begin BankingProcess
+INFO  | 2022-07-18 09:22:21 | [Thread-3] banking.Bank (Bank.java:73) - poolAccounts upload successful, size: 200
+INFO  | 2022-07-18 09:27:23 | [Thread-3] banking.Bank (Bank.java:97) - poolAccounts download successful, size: 200 totalAmount: 10326
+INFO  | 2022-07-18 09:27:23 | [Thread-3] banking.BankingProcess (BankingProcess.java:35) - end BankingProcess
