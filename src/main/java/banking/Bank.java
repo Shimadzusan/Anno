@@ -25,7 +25,6 @@ public class Bank {
 	BankArray bankArray;
 	//Map or List
 	HashMap<String, ClientAccount> poolAccounts = new HashMap<String, ClientAccount>();	// new main object
-	HashMap<String, Integer> reserves = new HashMap<String, Integer>();	// old main object
 	
 	/**payee. payer. consumer*/
 	void doSomeThing() {
@@ -34,8 +33,6 @@ public class Bank {
 	
 	/**.. клиент 1123 переводит средства клиенту 1125 сумма 5 руб.*/
 	public void executeTransaction(String sender, String reciever, int amount) {
-//		reserves.put(sender, reserves.get(sender) - amount);
-//		reserves.put(reciever, reserves.get(reciever) + amount);
 		
 		/* poolAccounts */
 		ClientAccount payer = poolAccounts.get(sender);
@@ -50,14 +47,6 @@ public class Bank {
 	
 	/** initialization main object "reserves"/"poolAccounts" from file an the disk */
 	public void uploadData() throws FileNotFoundException, IOException {
-		/* reserves */
-//		String s = new DataOperation().readDataFromFile("C:\\Users\\tokug\\eclipse-workspace\\Anno\\balance.txt");
-//		String[] sArray = s.split("\n");
-//		for (int i = 0; i < sArray.length; i++) {
-//			String[] s2 = sArray[i].split(":");
-//			reserves.put(s2[0], Integer.parseInt(s2[1]));
-//		}
-		
 		/* poolAccounts */
 		//System.out.println("poolAccounts");
 		
@@ -75,11 +64,6 @@ public class Bank {
 	
 	/** download data from main object to file an the disk */
 	public void downloadData() throws IOException {
-//		String data = "";
-//		for(HashMap.Entry<String, Integer> item : reserves.entrySet()) {
-//			data = data + item.getKey() + ":" +  item.getValue() + "\n";
-//			new DataOperation().writeDataToFile("C:\\Users\\tokug\\eclipse-workspace\\Anno\\balance.txt", data);
-//		}
 		
 		/* poolAccounts */
 		Gson gson = new Gson();
