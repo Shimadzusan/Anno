@@ -81,7 +81,30 @@ public class Bank {
 		LOG.info("poolAccounts download successful, size: " + poolAccounts.size() + " totalAmount: " + totalAmount);
 	}
 	
-	void openAccount() {}
-	void closeAccount() {}
+	void openAccount() {
+		System.out.println("openAccount..");
+		
+	}
+	void closeAccount() {
+		System.out.println("closeAccount..");
+	}
 	void balanceAccount() {}
+	
+	/**.. клиент 1123 вносит средства, сумма 5 руб.*/
+	void depositCash(String account, int amount) {
+		System.out.println("depositCash..");
+		
+		ClientAccount payer = poolAccounts.get(account);
+		payer.setAmount(payer.getAmount() + amount);
+		poolAccounts.put(account, payer);
+	}
+	
+	/**.. клиент 1123 выводит средства, сумма 5 руб.*/
+	void withdrawalCash(String account, int amount) {
+		System.out.println("withdrawalCash..");
+		
+		ClientAccount payer = poolAccounts.get(account);
+		payer.setAmount(payer.getAmount() - amount);
+		poolAccounts.put(account, payer);
+	}
 }

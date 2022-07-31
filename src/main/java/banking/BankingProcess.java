@@ -43,8 +43,27 @@ public class BankingProcess extends Thread implements Runnable {
 		int x = randomNumber.nextInt(1001, 1200);
 		int y = randomNumber.nextInt(1001, 1200);
 		int z = randomNumber.nextInt(100);
+		
+		if(z <= 70) {
 		bn.executeTransaction(x + "", y + "", z);
 		System.out.println("..executeTransaction");
+		}
+		
+		if(z > 70 && z <= 75) {
+			bn.openAccount();
+		}
+		
+		if(z > 75 && z <= 80) {
+			bn.closeAccount();;
+		}
+		
+		if(z > 80 && z <= 90) {
+			bn.depositCash(y + "", z);;
+		}
+		
+		if(z > 90 && z <= 100) {
+			bn.withdrawalCash(y + "", z);
+		}
 //		bn.downloadData();
 	}
 }
