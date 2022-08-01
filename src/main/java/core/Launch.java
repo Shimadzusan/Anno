@@ -12,6 +12,7 @@ import java.util.Random;
 import banking.Bank;
 import banking.BankingProcess;
 import util.DataOperation;
+import workforce.FarmProcess;
 
 /**
  * Основной поток исполнения, и остальные дополнительные итд
@@ -34,7 +35,7 @@ public class Launch {
 		sp.start();
 		
 		Thread fp = new FarmProcess();
-		//fp.start();
+		fp.start();
 		
 		Thread bk = new BankingProcess();
 		bk.start();
