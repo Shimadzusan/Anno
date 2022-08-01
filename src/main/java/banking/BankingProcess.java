@@ -7,29 +7,29 @@ import java.util.Random;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import core.ConfigurationModule;
+
 public class BankingProcess extends Thread implements Runnable {
 
 	private static final Logger LOG = LogManager.getLogger(BankingProcess.class);
-	Bank bn;
+	Bank bank;
+	
 	@Override
 	public void run() {
-		
 		LOG.info("begin BankingProcess");
 		try {
-			bn = new Bank();
-			bn.uploadData();
-			for (int j = 0; j < 200; j++) {
-				Thread.sleep(1500);
+			bank = new Bank();
+			bank.uploadData();
+			for (int j = 0; j < ConfigurationModule.bankingProcessIteration; j++) {
+				Thread.sleep(ConfigurationModule.bankingProcessFrequency);
 				initLogicStreamExecution();	//..some stream execution
 			}
-			bn.downloadData();
+			bank.downloadData();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		LOG.info("end BankingProcess");
@@ -37,33 +37,40 @@ public class BankingProcess extends Thread implements Runnable {
 
 	/** некоторое логическое воздействие на объект Bank */
 	private void initLogicStreamExecution() throws FileNotFoundException, IOException {
-//		Bank bn = new Bank();
-//		bn.uploadData();
+//		Bank bank = new Bank();
+//		bank.uploadData();
 		Random randomNumber = new Random();
 		int x = randomNumber.nextInt(1001, 1200);
 		int y = randomNumber.nextInt(1001, 1200);
 		int z = randomNumber.nextInt(100);
 		
 		if(z <= 70) {
-		bn.executeTransaction(x + "", y + "", z);
+		bank.executeTransaction(x + "", y + "", z);
 		System.out.println("..executeTransaction");
 		}
 		
 		if(z > 70 && z <= 75) {
-			bn.openAccount();
+			bank.openAccount();
 		}
 		
 		if(z > 75 && z <= 80) {
-			bn.closeAccount();;
+			bank.closeAccount();;
 		}
 		
 		if(z > 80 && z <= 90) {
-			bn.depositCash(y + "", z);;
+			bank.depositCash(y + "", randomNumber.nextInt(100));;
 		}
 		
 		if(z > 90 && z <= 100) {
-			bn.withdrawalCash(y + "", z);
+			bank.withdrawalCash(y + "", randomNumber.nextInt(100));
 		}
-//		bn.downloadData();
+//		bank.downloadData();
 	}
+	
+	/** некоторое логическое воздействие на объект Bank */
+	private void actionLogicStreamExecution() throws FileNotFoundException, IOException {}
+	
+	/** некоторое логическое воздействие на объект Bank */
+	private void endLogicStreamExecution() throws FileNotFoundException, IOException {}
+	
 }

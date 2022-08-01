@@ -29,6 +29,7 @@ public class Bank {
 	/**payee. payer. consumer*/
 	void doSomeThing() {
 		System.out.println("..banking ..banking");
+		//poolAccounts.containsKey(LOG);
 	}
 	
 	/**.. клиент 1123 переводит средства клиенту 1125 сумма 5 руб.*/
@@ -88,6 +89,7 @@ public class Bank {
 	void closeAccount() {
 		System.out.println("closeAccount..");
 	}
+	
 	void balanceAccount() {}
 	
 	/**.. клиент 1123 вносит средства, сумма 5 руб.*/
