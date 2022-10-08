@@ -497,4 +497,47 @@ INFO  | 2022-07-31 19:41:38 | [Thread-3] banking.BankingProcess (BankingProcess.
 INFO  | 2022-07-31 19:55:30 | [Thread-3] banking.BankingProcess (BankingProcess.java:19) - begin BankingProcess
 INFO  | 2022-07-31 19:55:30 | [Thread-3] banking.Bank (Bank.java:62) - poolAccounts upload successful, size: 200
 INFO  | 2022-07-31 19:58:51 | [Thread-3] banking.Bank (Bank.java:81) - poolAccounts download successful, size: 200 totalAmount: 11915
-INFO  | 2022-07-31 19:58:51 | [Thread-3] banking.BankingProcess (BankingProcess.java:35) - end BankingProcess
+INFO  | 2022-07-31 19:58:51 | [Thread-3] banking.BankingProcess (BankingProcess.java:35) - end BankingProcessINFO  | 2022-08-01 21:00:01 | [Thread-2] workforce.FarmProcess (FarmProcess.java:37) - begin FarmProcess
+INFO  | 2022-08-01 21:00:01 | [Thread-3] banking.BankingProcess (BankingProcess.java:19) - begin BankingProcess
+INFO  | 2022-08-01 21:00:01 | [Thread-3] banking.Bank (Bank.java:63) - poolAccounts upload successful, size: 200
+INFO  | 2022-10-06 20:23:27 | [Thread-2] workforce.FarmProcess (FarmProcess.java:37) - begin FarmProcess
+INFO  | 2022-10-06 20:23:27 | [Thread-3] banking.BankingProcess (BankingProcess.java:19) - begin BankingProcess
+INFO  | 2022-10-06 20:23:27 | [Thread-3] banking.Bank (Bank.java:63) - poolAccounts upload successful, size: 200
+INFO  | 2022-10-06 20:25:07 | [Thread-2] workforce.FarmProcess (FarmProcess.java:48) - end FarmProcess
+INFO  | 2022-10-06 20:26:47 | [Thread-3] banking.Bank (Bank.java:82) - poolAccounts download successful, size: 200 totalAmount: 12156
+INFO  | 2022-10-06 20:26:47 | [Thread-3] banking.BankingProcess (BankingProcess.java:35) - end BankingProcess
+INFO  | 2022-10-06 20:51:46 | [Thread-2] workforce.FarmProcess (FarmProcess.java:37) - begin FarmProcess
+INFO  | 2022-10-06 20:51:46 | [Thread-3] banking.BankingProcess (BankingProcess.java:19) - begin BankingProcess
+INFO  | 2022-10-06 20:51:46 | [Thread-3] banking.Bank (Bank.java:63) - poolAccounts upload successful, size: 200
+INFO  | 2022-10-06 20:52:44 | [Thread-2] workforce.FarmProcess (FarmProcess.java:37) - begin FarmProcess
+INFO  | 2022-10-06 20:52:44 | [Thread-3] banking.BankingProcess (BankingProcess.java:19) - begin BankingProcess
+INFO  | 2022-10-06 20:52:44 | [Thread-3] banking.Bank (Bank.java:63) - poolAccounts upload successful, size: 200
+INFO  | 2022-10-06 20:53:27 | [Thread-2] workforce.FarmProcess (FarmProcess.java:48) - end FarmProcess
+INFO  | 2022-10-06 20:54:25 | [Thread-2] workforce.FarmProcess (FarmProcess.java:48) - end FarmProcess
+INFO  | 2022-10-06 20:55:07 | [Thread-3] banking.Bank (Bank.java:82) - poolAccounts download successful, size: 200 totalAmount: 12260
+INFO  | 2022-10-06 20:55:07 | [Thread-3] banking.BankingProcess (BankingProcess.java:35) - end BankingProcess
+INFO  | 2022-10-06 20:56:05 | [Thread-3] banking.Bank (Bank.java:82) - poolAccounts download successful, size: 200 totalAmount: 12557
+INFO  | 2022-10-06 20:56:05 | [Thread-3] banking.BankingProcess (BankingProcess.java:35) - end BankingProcess
+INFO  | 2022-10-06 21:34:05 | [Thread-2] workforce.FarmProcess (FarmProcess.java:37) - begin FarmProcess
+INFO  | 2022-10-06 21:34:05 | [Thread-3] banking.BankingProcess (BankingProcess.java:19) - begin BankingProcess
+INFO  | 2022-10-06 21:34:05 | [Thread-3] banking.Bank (Bank.java:63) - poolAccounts upload successful, size: 200
+INFO  | 2022-10-06 21:35:45 | [Thread-2] workforce.FarmProcess (FarmProcess.java:48) - end FarmProcess
+INFO  | 2022-10-06 21:37:26 | [Thread-3] banking.Bank (Bank.java:82) - poolAccounts download successful, size: 200 totalAmount: 12394
+INFO  | 2022-10-06 21:37:26 | [Thread-3] banking.BankingProcess (BankingProcess.java:35) - end BankingProcess
+INFO  | 2022-10-06 22:05:31 | [Thread-3] banking.BankingProcess (BankingProcess.java:19) - begin BankingProcess
+INFO  | 2022-10-06 22:05:31 | [Thread-2] workforce.FarmProcess (FarmProcess.java:37) - begin FarmProcess
+INFO  | 2022-10-06 22:05:31 | [Thread-3] banking.Bank (Bank.java:63) - poolAccounts upload successful, size: 200
+INFO  | 2022-10-06 22:07:11 | [Thread-2] workforce.FarmProcess (FarmProcess.java:48) - end FarmProcess
+INFO  | 2022-10-06 22:08:20 | [Thread-2] workforce.FarmProcess (FarmProcess.java:37) - begin FarmProcess
+INFO  | 2022-10-06 22:08:20 | [Thread-3] banking.BankingProcess (BankingProcess.java:19) - begin BankingProcess
+INFO  | 2022-10-06 22:08:20 | [Thread-3] banking.Bank (Bank.java:63) - poolAccounts upload successful, size: 200
+INFO  | 2022-10-06 22:10:00 | [Thread-2] workforce.FarmProcess (FarmProcess.java:48) - end FarmProcess
+INFO  | 2022-10-08 11:31:50 | [Thread-2] workforce.FarmProcess (FarmProcess.java:37) - begin FarmProcess
+INFO  | 2022-10-08 11:31:50 | [Thread-3] banking.BankingProcess (BankingProcess.java:19) - begin BankingProcess
+INFO  | 2022-10-08 11:31:50 | [Thread-3] banking.Bank (Bank.java:63) - poolAccounts upload successful, size: 200
+INFO  | 2022-10-08 11:38:18 | [Thread-2] workforce.FarmProcess (FarmProcess.java:37) - begin FarmProcess
+INFO  | 2022-10-08 11:56:06 | [Thread-2] workforce.FarmProcess (FarmProcess.java:37) - begin FarmProcess
+INFO  | 2022-10-08 12:29:08 | [Thread-2] workforce.FarmProcess (FarmProcess.java:37) - begin FarmProcess
+INFO  | 2022-10-08 12:30:48 | [Thread-2] workforce.FarmProcess (FarmProcess.java:48) - end FarmProcess
+INFO  | 2022-10-08 14:43:00 | [Thread-2] workforce.FarmProcess (FarmProcess.java:37) - begin FarmProcess
+INFO  | 2022-10-08 14:46:51 | [Thread-2] workforce.FarmProcess (FarmProcess.java:37) - begin FarmProcess

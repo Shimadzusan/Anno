@@ -31,16 +31,19 @@ public class Farm {
 		this.worker = worker;
 	}
 
-	/** метод генерирует значение продукта для одной фермы */
-	public void growthAgriculture() throws Exception {
+	/** метод генерирует значение продукта для одной фермы, главное уравнение системы a+b=c */
+	public void growthAgriculture(Worker worker) throws Exception {
 		equipment--;
 		Random r = new Random();
 		int x = 0;	
-		for (int i = 0; i < 2; i++) {
-			x = r.nextInt(1000000);
-			//produceWork(x + "");
-			//System.out.println(x);
-			if(x > 10 && compareValue(x))product++;
+		for (int i = 0; i < worker.getExperience(); i++) {
+			x = r.nextInt(1_000_000);
+			if(x > 10 && compareValue(x)) {
+				product++;
+				worker.setExperience(worker.getExperience() + 1);
+			
+			}
+			
 		}
 		System.out.println("..growth ..growth, product: " + product + " equipment: " + equipment);
 	}
@@ -64,7 +67,7 @@ public class Farm {
 	}
 	
 	void calculateBalance() {
-		System.out.println("..farm balance ..farm balance");
+		//System.out.println("..farm balance ..farm balance");
 	}
 	
 	/** метод вычислияет уникальность значения, если значение уникальное(22, 555...) true, если нет false */

@@ -22,7 +22,7 @@ public class FarmProcess extends Thread implements Runnable {
 	// список объектов связанных с процессом
 		Farm farm, farm2;
 		Worker worker, worker2, worker3;
-		List<Worker> workerList = new ArrayList<Worker>();
+		List<Worker> workerList = new ArrayList<Worker>(); //..здесь целая группа(список) воркеров
 		
 		// переменные для управления процессом
 		//...
@@ -68,9 +68,9 @@ public class FarmProcess extends Thread implements Runnable {
 		farm.calculateBalance();
 		farm.produceWork();
 		
-//		worker.doWork(farm);
-//		worker2.doWork(farm2);
-//		worker3.doWork(farm2);
+		worker.doWork(farm);
+		worker2.doWork(farm2);
+		worker3.doWork(farm2);
 //		
 //		for (Worker worker : workerList) {
 //			worker.doWork(farm);

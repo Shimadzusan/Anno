@@ -29,16 +29,16 @@ public class Launch {
 
 // создаем все необходимые для работы объекты и процессы
 		Thread mp = new MainProcess();
-		mp.start();
+		//mp.start();
 		
 		Thread sp = new SecondProcess();
-		sp.start();
+		//sp.start();
 		
 		Thread fp = new FarmProcess();
 		fp.start();
 		
 		Thread bk = new BankingProcess();
-		bk.start();
+		//bk.start();
 		
 //===========================================
 //		for (int i = 1001; i < 1200; i++) {
