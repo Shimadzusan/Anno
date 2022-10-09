@@ -29,7 +29,7 @@ public class LocalReflect {
 		AccountingDepartment accountingdepartment = new AccountingDepartment();
 		Bank bank = new Bank();
 		BankingProcess bankingprocess = new BankingProcess();
-		Farm farm = new Farm();
+		//Farm farm = new Farm();
 		FarmProcess farmprocess = new FarmProcess();
 		Launch launch = new Launch();
 		MainProcess mainprocess = new MainProcess();

@@ -39,49 +39,6 @@ public class Launch {
 		
 		Thread bk = new BankingProcess();
 		//bk.start();
-		
-//===========================================
-//		for (int i = 1001; i < 1200; i++) {
-//			Random randomNumber = new Random();
-////			int x = randomNumber.nextInt(1001, 1200);
-////			int y = randomNumber.nextInt(1001, 1200);
-//			int z = randomNumber.nextInt(100);
-//			System.out.println("{\"accontNumber\": \"" + i + "\",\"amount\": " + z + ",\"firstName\": \"\",\"secondName\": \"\",\"otchestvo\": \"\",\"typeDocument\": \"\",\"idDocument\": \"\"},");	
-//		}
-//		System.out.println();
-//		Bank bn = new Bank();
-//		bn.uploadData();
-//		Random randomNumber = new Random();
-//		int x = randomNumber.nextInt(1001, 1200);
-//		int y = randomNumber.nextInt(1001, 1200);
-//		int z = randomNumber.nextInt(100);
-//		bn.executeTransaction(x + "", y + "", z);
-//		bn.downloadData();
-		//new DataOperation().writeDataToFile("C:\\Users\\tokug\\eclipse-workspace\\Anno\\balance.txt", "125+125+125");
-		
-//*************************************************************
-//		Random r = new Random();
-//		
-//		int x = 0;
-//		long a = System.currentTimeMillis();
-//		long b;
-//		int z = 0;
-//		
-//		for (int i = 0; i < 1_000_000; i++) {
-//			x = r.nextInt(1000000);
-//			//System.out.println(i);
-//			
-//			//if(x > 10 && compareValue(x))System.out.println("+" + x);
-//			if(x > 10 && compareValue(x))z++;
-//			 
-//		}
-//		System.out.println("z: " + z);
-//		//System.out.println(compareValue(447));
-//		b = System.currentTimeMillis();
-//		System.out.println(b-a);
-//
-//		System.out.println("...end");
-		
 	}
 
 	/** description... */
@@ -92,8 +49,7 @@ public class Launch {
 			if(chArray[0] == chArray[i])flag++;
 		}
 		if(chArray.length == flag)return true;
-		else return false;
-		
+		else return false;	
 	}
 
 }

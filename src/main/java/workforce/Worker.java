@@ -9,7 +9,7 @@ public class Worker {
 	/** объект воздействия Farm */
 	public void doWork(Farm farm) throws Exception {
 		farm.growthAgriculture(this);
-		System.out.println("worker ..doWork.. experience: " + experience);
+		//System.out.println("worker ..doWork.. experience: " + experience);
 	}
 
 	public int getId() {

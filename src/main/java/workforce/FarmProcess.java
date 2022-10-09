@@ -12,6 +12,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import core.ConfigurationModule;
+import logistic.Warehouse;
 import workforce.Worker;
 
 /** здесь описывается только последовательность и логика воздействий, основного процесса*/
@@ -23,6 +24,7 @@ public class FarmProcess extends Thread implements Runnable {
 		Farm farm, farm2;
 		Worker worker, worker2, worker3;
 		List<Worker> workerList = new ArrayList<Worker>(); //..здесь целая группа(список) воркеров
+		Warehouse warehouse = new Warehouse();
 		
 		// переменные для управления процессом
 		//...
@@ -40,7 +42,6 @@ public class FarmProcess extends Thread implements Runnable {
 			for (int j = 0; j < ConfigurationModule.quantity; j++) {
 				Thread.sleep(ConfigurationModule.frequency);
 				actionLogicStreamExecution();	//..some stream execution
-
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -59,24 +60,20 @@ public class FarmProcess extends Thread implements Runnable {
 			workerList.add(new Worker());
 		}
 		
-		farm = new Farm(workerList);
-		farm2 = new Farm();
+		farm = new Farm(workerList, warehouse);
+		farm2 = new Farm(warehouse);
 	}
 	
 	 /** некоторое логическое воздействие на объект Farm */
 	private void actionLogicStreamExecution() throws Exception {
-		farm.calculateBalance();
+		/* approach one */
+		//farm.calculateBalance();
 		farm.produceWork();
 		
+		/* approach two */
 		worker.doWork(farm);
 		worker2.doWork(farm2);
 		worker3.doWork(farm2);
-//		
-//		for (Worker worker : workerList) {
-//			worker.doWork(farm);
-//		}
-		//farm2.growthAgriculture();
-		//farm2.calculateBalance();
 	}
 	
 	 /** некоторое логическое воздействие на объект Farm*/

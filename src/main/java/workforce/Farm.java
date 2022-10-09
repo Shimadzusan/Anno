@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+import logistic.Warehouse;
 import util.DataOperation;
 
 public class Farm {
@@ -22,13 +23,15 @@ public class Farm {
 	PowerDepartment pd = new PowerDepartment();
 	
 	List<Worker> worker;//..workforce
+	Warehouse warehouse;
 
-	public Farm() {
-		
+	public Farm(Warehouse warehouse) {
+		this.warehouse = warehouse;
 	}
 	
-	public Farm(List<Worker> worker) {
+	public Farm(List<Worker> worker, Warehouse warehouse) {
 		this.worker = worker;
+		this.warehouse = warehouse;
 	}
 
 	/** метод генерирует значение продукта для одной фермы, главное уравнение системы a+b=c */
@@ -41,11 +44,12 @@ public class Farm {
 			if(x > 10 && compareValue(x)) {
 				product++;
 				worker.setExperience(worker.getExperience() + 1);
-			
+				calculateBalance();
+				System.out.println(x);
 			}
 			
 		}
-		System.out.println("..growth ..growth, product: " + product + " equipment: " + equipment);
+		//System.out.println("..growth ..growth, product: " + product + " equipment: " + equipment);
 	}
 	
 	/** метод имитирует производство некоторой работы, напр. записывает в файл */
@@ -63,11 +67,16 @@ public class Farm {
 //		String s = new DataOperation().readDataFromFile("C:\\Users\\worker\\eclipse-workspace\\Anno\\farmData.txt");
 //		s = s + data;
 //		new DataOperation().writeDataToFile("C:\\Users\\worker\\eclipse-workspace\\Anno\\farmData.txt", s);
-		System.out.println("..produceWork: " + 000);
+		//System.out.println("..produceWork: " + 000);
 	}
 	
-	void calculateBalance() {
+	void calculateBalance() throws IOException {
 		//System.out.println("..farm balance ..farm balance");
+		if(product >= 2) {
+			System.out.println("product: " + product);
+		warehouse.setWare(warehouse.getWare() + product);
+		product = 0;
+		}
 	}
 	
 	/** метод вычислияет уникальность значения, если значение уникальное(22, 555...) true, если нет false */
