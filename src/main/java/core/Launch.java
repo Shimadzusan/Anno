@@ -13,6 +13,7 @@ import banking.Bank;
 import banking.BankingProcess;
 import util.DataOperation;
 import workforce.FarmProcess;
+import workforce_2.MainWorkProcess;
 
 /**
  * Основной поток исполнения, и остальные дополнительные итд
@@ -28,6 +29,9 @@ public class Launch {
 		System.out.println("..end point of the stream execution");
 
 // создаем все необходимые для работы объекты и процессы
+		Thread workProcess = new MainWorkProcess();
+		workProcess.start();
+
 		Thread mp = new MainProcess();
 		//mp.start();
 		
@@ -35,9 +39,9 @@ public class Launch {
 		//sp.start();
 		
 		Thread fp = new FarmProcess();
-		fp.start();
+//		fp.start();
 		
-		Thread bk = new BankingProcess();
+		//Thread bk = new BankingProcess();
 		//bk.start();
 	}
 

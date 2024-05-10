@@ -1,0 +1,3 @@
+In current time we have two different approaches for coding in Java.
+First, objects such as Farm contains objects such as Worker.
+Second, objects such as Worker contains objects such as Farm.
